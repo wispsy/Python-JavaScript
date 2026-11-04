@@ -7,7 +7,7 @@
       "cases": [
         "text-metrics-single-module"
       ],
-      "source": "https://github.com/outside-labs/shimify/tree/b48ed1778270508007d75b861dc117ad4ddc4f2b/tests/fixtures/text_metrics",
+      "source": "https://github.com/wispsy/shimify/tree/b48ed1778270508007d75b861dc117ad4ddc4f2b/tests/fixtures/text_metrics",
       "license": "licenses/SHIMIFY-LICENSE.txt",
       "notes": "Shared reduced computation adopted in compiler_contract.json; exact MIT notice retained in compiled artifacts. Other cases are original regression examples."
     }

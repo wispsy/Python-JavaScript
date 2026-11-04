@@ -104,7 +104,7 @@ Fetch's `response.json()` result types.
 
 ## Fetch and Promise boundaries
 
-The [standalone Fetch documentation](https://github.com/outside-labs/JavaScript-Fetch-API)
+The [standalone Fetch documentation](https://github.com/wispsy/JavaScript-Fetch-API)
 is the complete contract. Core HTTP(S) requests, buffered bodies, headers,
 redirects, promises and await work. Browser policies, streaming, abort, cookies
 and browser globals are not provided. Promise callbacks use a background Python
