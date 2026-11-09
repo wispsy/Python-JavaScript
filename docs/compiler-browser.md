@@ -98,7 +98,7 @@ HTML or arbitrary host properties to these operations.
 
 ## Ordering, lifetime and limits
 
-The adapter implements the [HOST-01 envelope and lifecycle](https://github.com/outside-labs/pocket-python/blob/main/docs/browser-host-protocol.md)
+The adapter implements the [HOST-01 envelope and lifecycle](https://github.com/wispsy/pocket-python/blob/main/docs/browser-host-protocol.md)
 for this adopted surface: fresh 128-bit sessions, independent monotonic sequence
 counters, unique request IDs, bounded pending work and terminal replies. Stale
 sessions do not advance counters. Malformed active messages/replays close the

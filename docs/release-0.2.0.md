@@ -45,4 +45,4 @@ approved browser conformance, strict distribution allowlists/metadata, and final
 main CI. Publish immutable `v0.2.0` through the existing `pypi` Trusted Publisher,
 compare PyPI hashes with workflow artifacts, then test a fresh installation and
 compile/run a representative module before closing
-[REL-03](https://github.com/outside-labs/Python-JavaScript/issues/38).
+[REL-03](https://github.com/wispsy/Python-JavaScript/issues/38).

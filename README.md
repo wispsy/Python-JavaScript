@@ -96,8 +96,8 @@ This alpha supports the explicit [compiler language](docs/compiler-language.md),
 not arbitrary Python dependencies or complete ECMAScript. Prototypes, descriptors,
 Date, RegExp, Map/Set, typed arrays and unlisted APIs remain future work. See
 [0.2.0 release notes](docs/release-0.2.0.md), the [implementation plan](IMPLEMENTATION_PLAN.md),
-[issues](https://github.com/outside-labs/Python-JavaScript/issues) and
-[Project](https://github.com/orgs/outside-labs/projects/11).
+[issues](https://github.com/wispsy/Python-JavaScript/issues) and
+[Project](https://github.com/orgs/wispsy/projects/11).
 
 ## Development
 

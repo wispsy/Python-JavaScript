@@ -77,7 +77,7 @@ restart. Signal reasons are not copied into application errors.
 
 AbortSignal delivery cannot interrupt busy synchronous execution on its own.
 In a worker, the trusted main thread must retain worker termination as the stop
-path. The [host protocol](https://github.com/outside-labs/pocket-python/blob/main/docs/browser-host-protocol.md)
+path. The [host protocol](https://github.com/wispsy/pocket-python/blob/main/docs/browser-host-protocol.md)
 uses session/request IDs, serialized tagged values, exactly one terminal result
 and CANCELLED/TIMEOUT replies. The [browser profile](compiler-browser.md) wraps a pending
 host result as an adopted Promise, forwards cancellation to its request, discards

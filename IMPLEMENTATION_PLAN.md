@@ -11,19 +11,19 @@ and tag `v0.1.0` point to `c0389e4645c39f3db23ad2e911475fdd3188dad5`.
 
 | Task | Completed PR |
 | --- | --- |
-| FET-01 | [Fetch #2](https://github.com/outside-labs/JavaScript-Fetch-API/pull/2), published as 0.2.0 |
-| JS-01 | [#16](https://github.com/outside-labs/Python-JavaScript/pull/16) |
-| JS-02 | [#17](https://github.com/outside-labs/Python-JavaScript/pull/17) |
-| JS-03 | [#18](https://github.com/outside-labs/Python-JavaScript/pull/18) |
-| QA-01 | [#19](https://github.com/outside-labs/Python-JavaScript/pull/19) |
-| CORE-01 | [#21](https://github.com/outside-labs/Python-JavaScript/pull/21), review-discovered edge-case fix |
+| FET-01 | [Fetch #2](https://github.com/wispsy/JavaScript-Fetch-API/pull/2), published as 0.2.0 |
+| JS-01 | [#16](https://github.com/wispsy/Python-JavaScript/pull/16) |
+| JS-02 | [#17](https://github.com/wispsy/Python-JavaScript/pull/17) |
+| JS-03 | [#18](https://github.com/wispsy/Python-JavaScript/pull/18) |
+| QA-01 | [#19](https://github.com/wispsy/Python-JavaScript/pull/19) |
+| CORE-01 | [#21](https://github.com/wispsy/Python-JavaScript/pull/21), review-discovered edge-case fix |
 
 Verification: 46 tests, including independent native Node observations;
 Linux/macOS/Windows Python 3.14 final-main CI; installed wheel and source tests;
 strict metadata checks; reviewed distribution contents; README examples; fresh
 PyPI-only installation; and SHA256 agreement for both published artifacts with
-[the Release build](https://github.com/outside-labs/Python-JavaScript/actions/runs/38959744536).
-[Final-main CI](https://github.com/outside-labs/Python-JavaScript/actions/runs/38959517890)
+[the Release build](https://github.com/wispsy/Python-JavaScript/actions/runs/38959744536).
+[Final-main CI](https://github.com/wispsy/Python-JavaScript/actions/runs/38959517890)
 passes. The installed dependencies are JavaScript-Fetch-API 0.2.0 and
 JavaScript-JSON 0.1.0. The locked local development environment is ready.
 
@@ -32,7 +32,7 @@ Published SHA256:
 - `python_javascript-0.1.0-py3-none-any.whl`: `3909129535faa257b58a99b39e40e86c0e88c547c32cb8c111ff9e1b8ebeb564`
 - `python_javascript-0.1.0.tar.gz`: `1d3e72381e8dde4b010430acb8d8a19b16caa01f223686c80bd95725fd70b8bb`
 
-The [compatibility matrix](https://github.com/outside-labs/Python-JavaScript/blob/v0.1.0/docs/compatibility.md)
+The [compatibility matrix](https://github.com/wispsy/Python-JavaScript/blob/v0.1.0/docs/compatibility.md)
 records the supported subset and deviations; it is also included in the source
 distribution. The translator remains a later milestone. Future tasks remain in
 Triage until their precise contracts are adopted.
@@ -52,9 +52,9 @@ constructs rather than silently emit JavaScript with different behavior.
 
 | Repository / PyPI distribution | Python import | Responsibility |
 | --- | --- | --- |
-| `outside-labs/Python-JavaScript` / `Python-JavaScript` | `JavaScript` | Core values, objects, arrays, primitive helpers, compatibility adapters, future translation tools |
-| `outside-labs/JavaScript-Fetch-API` / `JavaScript-Fetch-API` | `fetch_api` | Standalone HTTP Fetch API, headers, request/response, promises |
-| `outside-labs/JavaScript-JSON` / `JavaScript-JSON` | `JSON` | Standalone JSON parser, serializer, Python-friendly dot traversal |
+| `wispsy/Python-JavaScript` / `Python-JavaScript` | `JavaScript` | Core values, objects, arrays, primitive helpers, compatibility adapters, future translation tools |
+| `wispsy/JavaScript-Fetch-API` / `JavaScript-Fetch-API` | `fetch_api` | Standalone HTTP Fetch API, headers, request/response, promises |
+| `wispsy/JavaScript-JSON` / `JavaScript-JSON` | `JSON` | Standalone JSON parser, serializer, Python-friendly dot traversal |
 
 The main import is case-sensitive `JavaScript`. Do not provide a lowercase
 `javascript` alias: it would conflict with an existing distribution. Fetch moves
@@ -86,8 +86,8 @@ Dependency direction remains acyclic: main -> companions, never companions -> ma
 - The JSON checkout contains an unrelated staged/deleted empty file. Preserve it.
 
 GitHub Issues and the new private organization Project are the canonical queue:
-[Project #11](https://github.com/orgs/outside-labs/projects/11) and the
-[roadmap issue](https://github.com/outside-labs/Python-JavaScript/issues/1).
+[Project #11](https://github.com/orgs/wispsy/projects/11) and the
+[roadmap issue](https://github.com/wispsy/Python-JavaScript/issues/1).
 This document records architecture and acceptance criteria; completed PRs record
 implementation choices, verification, and deviations.
 
@@ -198,7 +198,7 @@ then continue the next task while CI runs. Dependent main tasks use stacked PRs.
 Fix failing checks, squash-merge in dependency order, retarget descendants, and
 verify the final default branch. Do not rewrite shared history.
 
-Release review added [CORE-01](https://github.com/outside-labs/Python-JavaScript/issues/20)
+Release review added [CORE-01](https://github.com/wispsy/Python-JavaScript/issues/20)
 as a separate focused fix after the first five PRs. It corrects the non-callable
 Math namespace, UTF-16-equivalent property keys, code-point iteration for explicit
 surrogate pairs, string length ownership, and ASCII-only radix digit parsing.
@@ -272,7 +272,7 @@ target; browser-specific assumptions require a separately defined target.
 1. Publish Fetch `0.2.0` after namespace CI and squash merge. JSON `0.1.0` is
    already published and can remain unchanged.
 2. Add a PyPI pending Trusted Publisher for project `Python-JavaScript`, GitHub
-   owner `outside-labs`, repository `Python-JavaScript`, workflow `release.yaml`,
+   owner `wispsy`, repository `Python-JavaScript`, workflow `release.yaml`,
    environment `pypi`. This account-side setup is performed by the account owner.
 3. Configure the repository `pypi` environment, merge the passing batch, verify
    final main CI and clean distribution installs, and create release `v0.1.0`.
@@ -319,10 +319,10 @@ package compatibility is implied.
 
 Related plans:
 
-- [Source reduction](https://github.com/outside-labs/shimify/blob/main/IMPLEMENTATION_PLAN03.md)
-- [Compiler/browser target](https://github.com/outside-labs/Python-JavaScript/blob/main/IMPLEMENTATION_PLAN.md)
-- [Application assembly](https://github.com/outside-labs/pocket-python/blob/main/IMPLEMENTATION_PLAN.md)
-- [Independent interpreter](https://github.com/outside-labs/pocket-python/blob/main/IMPLEMENTATION_PLAN_INTERPRETER.md)
+- [Source reduction](https://github.com/wispsy/shimify/blob/main/IMPLEMENTATION_PLAN03.md)
+- [Compiler/browser target](https://github.com/wispsy/Python-JavaScript/blob/main/IMPLEMENTATION_PLAN.md)
+- [Application assembly](https://github.com/wispsy/pocket-python/blob/main/IMPLEMENTATION_PLAN.md)
+- [Independent interpreter](https://github.com/wispsy/pocket-python/blob/main/IMPLEMENTATION_PLAN_INTERPRETER.md)
 
 The compiler repository became public on 2026-10-20. Project visibility remains
 separate; application artifacts still include only explicitly selected files.
@@ -351,14 +351,14 @@ meet their first milestones.
 
 | Task | Scope | Depends on | Readiness |
 | --- | --- | --- | --- |
-| [js/PARSE-01](https://github.com/outside-labs/Python-JavaScript/issues/11) | Specify the bounded translatable Python source language | Released foundation | Ready |
-| [js/PARSE-02](https://github.com/outside-labs/Python-JavaScript/issues/12) | Build AST binding, validation and lowering passes | [js/PARSE-01](https://github.com/outside-labs/Python-JavaScript/issues/11) | Blocked |
-| [js/EMIT-01](https://github.com/outside-labs/Python-JavaScript/issues/13) | Emit deterministic JavaScript for the approved subset | [js/PARSE-02](https://github.com/outside-labs/Python-JavaScript/issues/12) | Blocked |
-| [js/MOD-01](https://github.com/outside-labs/Python-JavaScript/issues/23) | Compile bounded local Python module imports | [js/EMIT-01](https://github.com/outside-labs/Python-JavaScript/issues/13) | Blocked |
-| [js/ASYNC-01](https://github.com/outside-labs/Python-JavaScript/issues/10) | Define Promise scheduling and browser async semantics | [js/PARSE-01](https://github.com/outside-labs/Python-JavaScript/issues/11) | Blocked |
-| [js/BROWSER-01](https://github.com/outside-labs/Python-JavaScript/issues/24) | Implement browser DOM, events and Fetch adapters | [js/MOD-01](https://github.com/outside-labs/Python-JavaScript/issues/23), [js/ASYNC-01](https://github.com/outside-labs/Python-JavaScript/issues/10), [pocket/HOST-01](https://github.com/outside-labs/pocket-python/issues/17) | Blocked |
-| [js/QA-03](https://github.com/outside-labs/Python-JavaScript/issues/25) | Verify CPython, Node and browser execution parity | [js/BROWSER-01](https://github.com/outside-labs/Python-JavaScript/issues/24), [js/ERR-01](https://github.com/outside-labs/Python-JavaScript/issues/34) | See issue / Project |
-| [js/PERF-01](https://github.com/outside-labs/Python-JavaScript/issues/26) | Measure compiled application and helper footprints | [js/QA-03](https://github.com/outside-labs/Python-JavaScript/issues/25) | Blocked |
+| [js/PARSE-01](https://github.com/wispsy/Python-JavaScript/issues/11) | Specify the bounded translatable Python source language | Released foundation | Ready |
+| [js/PARSE-02](https://github.com/wispsy/Python-JavaScript/issues/12) | Build AST binding, validation and lowering passes | [js/PARSE-01](https://github.com/wispsy/Python-JavaScript/issues/11) | Blocked |
+| [js/EMIT-01](https://github.com/wispsy/Python-JavaScript/issues/13) | Emit deterministic JavaScript for the approved subset | [js/PARSE-02](https://github.com/wispsy/Python-JavaScript/issues/12) | Blocked |
+| [js/MOD-01](https://github.com/wispsy/Python-JavaScript/issues/23) | Compile bounded local Python module imports | [js/EMIT-01](https://github.com/wispsy/Python-JavaScript/issues/13) | Blocked |
+| [js/ASYNC-01](https://github.com/wispsy/Python-JavaScript/issues/10) | Define Promise scheduling and browser async semantics | [js/PARSE-01](https://github.com/wispsy/Python-JavaScript/issues/11) | Blocked |
+| [js/BROWSER-01](https://github.com/wispsy/Python-JavaScript/issues/24) | Implement browser DOM, events and Fetch adapters | [js/MOD-01](https://github.com/wispsy/Python-JavaScript/issues/23), [js/ASYNC-01](https://github.com/wispsy/Python-JavaScript/issues/10), [pocket/HOST-01](https://github.com/wispsy/pocket-python/issues/17) | Blocked |
+| [js/QA-03](https://github.com/wispsy/Python-JavaScript/issues/25) | Verify CPython, Node and browser execution parity | [js/BROWSER-01](https://github.com/wispsy/Python-JavaScript/issues/24), [js/ERR-01](https://github.com/wispsy/Python-JavaScript/issues/34) | See issue / Project |
+| [js/PERF-01](https://github.com/wispsy/Python-JavaScript/issues/26) | Measure compiled application and helper footprints | [js/QA-03](https://github.com/wispsy/Python-JavaScript/issues/25) | Blocked |
 
 PARSE-01 is the first Ready compiler task. PARSE-02/EMIT-01 follow in order;
 MOD-01 adds local modules, ASYNC-01 defines the required async subset, and
@@ -464,7 +464,7 @@ text_metrics example and real-browser tests cover local/offline-after-load
 computation and transport/resource failures. WEB-03 owns verified PWA assembly
 and offline reload; QA-03 extends cross-target parity. No package was released.
 
-[ERR-01](https://github.com/outside-labs/Python-JavaScript/issues/34) corrects
+[ERR-01](https://github.com/wispsy/Python-JavaScript/issues/34) corrects
 preconstructed exception origins before QA-03: explicit raises and first source
 awaits replace constructor spans, while propagated runtime/callback errors retain
 their origin. CPython/native/browser cases cover the correction and mapped
@@ -492,7 +492,7 @@ complete application and future interpreter measurements remain separate scopes.
 
 ## 0.2.0 publication plan
 
-[REL-03](https://github.com/outside-labs/Python-JavaScript/issues/38) publishes
+[REL-03](https://github.com/wispsy/Python-JavaScript/issues/38) publishes
 the merged compiler, module/async/browser profiles, conformance and measurements.
 See the [release contract](docs/release-0.2.0.md). Runtime companion dependency
 ranges remain unchanged; compiler and browser assets are in the distributions.

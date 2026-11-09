@@ -10,7 +10,7 @@ The PyPI publisher must match these values exactly:
 | Field | Value |
 | --- | --- |
 | PyPI project | `Python-JavaScript` |
-| GitHub owner | `outside-labs` |
+| GitHub owner | `wispsy` |
 | Repository | `Python-JavaScript` |
 | Workflow | `release.yaml` |
 | Environment | `pypi` |
